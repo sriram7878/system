@@ -1,0 +1,89 @@
+<html>
+<head>
+<title>Registration Form</title>
+<style>
+body{
+background-image:url('https://pixabay.com/get/g0d5006296a823378616759abc5e647fc38a1761c7bc0c2aa7ef6d2a99b6945f69691a5bcf4b5dc390b8909d71a7deb6d_1920.jpg')
+}
+</style>
+<script type="text/javascript">
+function validation()
+{
+if(document.f1.ApplicantName.value=="")
+{
+window.alert("Plz Enter Your Name");
+return false;
+}
+else if(document.f1.email.value=="")
+{
+window.alert("Plz Enter Your E-mail:");
+return false;
+}
+else if(document.f1.email.value.indexOf('@gmail.com')==-1)
+{
+window.alert("Plz Enter Your Valid E-mail");
+return false;
+}
+else if(documnet.f1.PhoneNo.value=="")
+{
+window.alert("Plz Enter Your PhoneNo");
+return false;
+}
+else if(document.f1.DOB.value=="")
+{
+window.alert(Plz Enter Your DOB");
+return false;
+}
+else if(document.f1.addr.value=="")
+{
+window.alert("Plz Enter Your Address");
+return false;
+}
+else if(document.f1.country.selectedIndex==0)
+{
+window.alert("Plz Select Your Country");
+return false;
+}
+else if((document.f1.rdo[0].checked==false)&&(document.f1.rdo[1].checked==false)&&(document.f1.rdo[2].checked==false))
+{
+window.alert("Plz Choose Your Gender");
+return false;
+}
+else  if((document.f1.chk[0].checked==false)&&(document.f1.chk[1].checked==false)&&(document.f1.chk[2].checked==false))
+{
+window.alert("Plz Select Your Qualification");
+return false;
+}
+else
+return true;
+}
+</script>
+</head> 
+<body>
+<h1 style="text-align:center">Recruitment System</h1>
+<form name="f1" action="register.html" onsubmit="return validation()">
+<fieldset>
+<legend>Registration Form</legend>
+<table border="3">
+<tr><th>ApplicantName:</th><td><input type="text" name="ApplicantName" size="31"></td></tr>
+<tr><th>E-mail:</th><td><input type="text" name="email" size="31"></td></tr>
+<tr><th>PhoneNo:</th><td><input type="number" name="PhoneNo" size="31"></td></tr>
+<tr><th>DOB:</th><td><input type="date" name="DOB" size="31"></td></tr>
+<tr><th>Address:</th><td><Textarea name="addr" rows="5" cols="25"></Textarea></td></tr>
+<tr><th>Country:</th><td><select name="country">
+<option>---Select Your Country---</option>
+<option>India</option>
+<option>China</option>
+<option>Nepal</option>
+<option>Myanmmar</option>
+</select></td></tr>
+<tr><th>Gender:</th><td><input type="radio" name="rdo[0]">Male<input type="radio" name="rdo[1]">Female <input type="radio" name="rdo[2]">Transgender</td>
+</tr><tr><th>Qualification:</th><td>
+<input type="checkbox" name="chk">B.E
+<input type="checkbox" name="chk">M.E
+<input type="checkbox" name="chk">Ph.D.
+</td>
+</tr>
+</table>
+<input type="submit" value="Register">
+<input type="button" value="cancel"></fieldset></form></body></html>
